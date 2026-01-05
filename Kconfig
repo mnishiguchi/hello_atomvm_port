@@ -1,0 +1,10 @@
+menu "SampleApp Port Configuration"
+
+    config AVM_SAMPLE_APP_PORT_ENABLE
+        bool "Enable SampleApp Port example"
+        default y
+        help
+            Enable the SampleApp Port AtomVM component.
+
+endmenu
+
