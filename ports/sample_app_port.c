@@ -130,10 +130,8 @@ Context *sample_app_port_create_port(GlobalContext *global, term opts)
     return ctx;
 }
 
-#ifdef CONFIG_AVM_SAMPLE_APP_PORT_ENABLE
 REGISTER_PORT_DRIVER(
     sample_app_port,
     sample_app_port_init,
     sample_app_port_destroy,
     sample_app_port_create_port);
-#endif
