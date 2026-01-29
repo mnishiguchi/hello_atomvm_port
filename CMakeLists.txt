@@ -1,5 +1,3 @@
-# hello_atomvm_port ESP-IDF component (AtomVM port driver)
-
 idf_component_register(
     SRCS "ports/sample_app_port.c"
     INCLUDE_DIRS "ports/include"
