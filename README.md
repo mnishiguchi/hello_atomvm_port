@@ -13,6 +13,25 @@ supported by AtomVM + ESP-IDF.
 
 ![](https://github.com/user-attachments/assets/8840b0e2-68bd-408f-b7c3-1d27bc9e5310)
 
+## Quickstart
+
+```sh
+git clone https://github.com/piyopiyoex/hello_atomvm_port.git
+cd hello_atomvm_port
+
+# Build + flash AtomVM firmware (includes the port driver)
+bash scripts/atomvm-esp32.sh install --target esp32s3 --port /dev/ttyACM0
+
+# Build + flash the Elixir example app
+cd examples/elixir
+mix deps.get
+mix do clean + atomvm.esp32.flash --port /dev/ttyACM0
+
+# Monitor serial output
+cd ../..
+bash scripts/atomvm-esp32.sh monitor --port /dev/ttyACM0
+```
+
 ## What’s in this repo
 
 - `ports/`
